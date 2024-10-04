@@ -11,8 +11,8 @@ from src.mcqgenerator.logger import logging
 
 
 #load the response (loading json file)
-with open(r'C:\Users\PUJA KUMARI\Desktop\mcqgen\Response.json','r') as file:
-    RESPONSE_JSON=json.load(file)
+with open(r'C:\Users\PUJA KUMARI\Desktop\mcqgen\data.txt','r') as file:
+    response_jdon=json.load(file)
 
 #creating a title for the app(create web application)
 st.title=("MCQ creator application with LangChain !! ")
@@ -53,7 +53,7 @@ with st.form("user_inputs"):
                         }
                     )
 
-                #st.write(response)
+                st.write(response)
             except Exception as e:
                 traceback.print_exception(type(e),e,e.__traceback__)
                 st.error("Erros")
